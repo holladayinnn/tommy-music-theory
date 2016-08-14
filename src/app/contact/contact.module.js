@@ -1,0 +1,1 @@
+angular.module('MyApp.Contact', ['ngAudio', 'MyApp.Common']);

@@ -1,0 +1,41 @@
+.contact-header h3{
+	margin-top:0px;
+}
+
+.feedback-header h4 {
+    font-size: 24px;
+    font-family: raleway;
+    text-decoration: none;
+}
+
+.required:after { 
+	color: #aaa;
+	content:" *"; 
+}
+
+.rating {
+	margin-top: -10px;
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	text-align:left;
+}
+.rating > span {
+	display: inline-block;
+	position: relative;
+	width: 1.1em;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 20px;
+}
+
+.oneStar > span.one:before,
+.oneStar > span.one ~ span:before, 
+.twoStars > span.two:before, .twoStars > span.two ~ span:before,
+.threeStars > span.three:before, .threeStars > span.three ~ span:before,
+.fourStars > span.four:before, .fourStars > span.four ~ span:before, 
+.fiveStars > span.five:before, .fiveStars > span.five ~ span:before {
+	content: "\2605";
+	position: absolute;
+	left: 0; 
+	color: goldenrod;
+}

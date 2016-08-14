@@ -1,0 +1,42 @@
+<div class="container">
+	<div class="page-top">
+		<div class="row">
+			<div class="col-lg-1 col-md-1"></div>
+			<div class="col-lg-10 col-md-10">
+				<div class="text-right">
+					<div class="form-group glow" ng-hide="ctrl._userAdded">
+						<input type="text" ng-model="ctrl._user.Username">
+						<button class="btn btn-tommy" ng-click="ctrl.add_user()">Create Username</button>
+					</div>
+					<div ng-show="ctrl._userAdded">
+						<strong><p>Username: <span ng-bind="ctrl._user.Username"></span></p></strong>
+					</div>
+				</div>
+				<div class="text-center">
+					<h1>Music Theory Exercises</h1>
+				</div>
+				<br />
+				<div class="nav-center">
+					<ul class="nav nav-justified nav-pills">
+						<li ui-sref-active="active">
+							<a class="page-link" ui-sref="{{ctrl.navStates.kETIntervalState}}">
+								Interval Ear Training
+							</a>
+						</li>
+						<li ui-sref-active="active">
+							<a class="page-link" ui-sref="{{ctrl.navStates.kLeaderboardState}}">
+								Leaderboard
+							</a>
+						</li>
+						<li ui-sref-active="active">
+							<a class="page-link" ui-sref="{{ctrl.navStates.kSongTrainerState}}">
+								Song Ear Training
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ui-view></div>
+</div>

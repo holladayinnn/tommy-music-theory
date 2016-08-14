@@ -1,0 +1,50 @@
+<div class="row" ng-hide="fbCtrl.formSubmitted">
+	<div class="col-md-10 col-md-offset-1 tommy-container">
+		<div class="feedback-header">
+			<br />
+			<h4>Send Me Your Feedback!</h4>
+		</div>
+		<br />
+		<form name="fbCtrl.feedbackForm" ng-submit="fbCtrl.submitFeedback()">
+			<div class="underline">
+			`	<label class="required">Name: </label>
+				<input type="text" placeholder="Your Name" class="form-control" ng-model="fbCtrl.name" required>
+			</div>
+			<br />
+			<div class="underline">
+				<label class="required">Email: </label>
+				<input type="email" placeholder="yourEmail@email.com" class="form-control" ng-model="fbCtrl.email" ng-pattern="ctrl.emailExp" required>
+			</div>
+			<br />
+			<div>
+				<p><label>Please rate this web app </label> <i class="fa fa-lg" ng-class="fbCtrl.iconClass" aria-hidden="true"></i></p>
+				<div class="rating" ng-class="fbCtrl.ratingClass">
+					<span ng-click="fbCtrl.setRating(5)" class="five">☆</span>
+					<span ng-click="fbCtrl.setRating(4)" class="four">☆</span>
+					<span ng-click="fbCtrl.setRating(3)" class="three">☆</span>
+					<span ng-click="fbCtrl.setRating(2)" class="two">☆</span>
+					<span ng-click="fbCtrl.setRating(1)" class="one">☆</span>
+			
+				</div>
+			</div>
+			<br />
+			<div class="form-group">
+				<p><label class="required">What do you like about this web app?</label></p>
+				<textarea class="form-control" rows="5" ng-model="fbCtrl.positiveFeedback" ng-required="ctrl.feedbackRequired" ng-change="fbCtrl.setFeedbackRequired()" placeholder="What do you like?"></textarea>
+			</div>
+			<div class="form-group">
+				<p><label class="required">What do you think could be improved?</label></p>
+				<textarea class="form-control" rows="5" ng-model="fbCtrl.improvementFeedback" ng-required="fbCtrl.feedbackRequired" ng-change="fbCtrl.setFeedbackRequired()" placeholder="What could be better?"></textarea>
+			</div>
+			<div>
+				<button type="submit" class="btn btn-tommy" ng-disabled="fbCtrl.feedbackForm.$invalid" ng-model="fbCtrl.improvementFeedback" ng-audio="app/common/sounds/submitForm.mp3" volume="0.2">Submit</button>
+			</div>
+		</form>
+		<br />
+	</div>
+</div>
+<div ng-show="fbCtrl.formSubmitted">
+	<h3>I appreciate your feedback, <span ng-bind="fbCtrl.name"></span>!</h3>  
+	<h3>Thanks for taking the time to fill in this form!</h3>
+</div>
+<br />

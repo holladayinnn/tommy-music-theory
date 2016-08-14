@@ -1,0 +1,65 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-1">
+			<div class="piano page-top">
+				<ol class="scale-1">
+					<li ng-mousedown="ctrl.k.playNote(0)" ng-mouseup="ctrl.k.stopNote()">C</li>
+					<li ng-mousedown="ctrl.k.playNote(1)" ng-mouseup="ctrl.k.stopNote()" class="ebony">C# D♭</li>
+					<li ng-mousedown="ctrl.k.playNote(2)" ng-mouseup="ctrl.k.stopNote()">D</li>
+					<li ng-mousedown="ctrl.k.playNote(3)" ng-mouseup="ctrl.k.stopNote()" class="ebony">D# E♭</li>
+					<li ng-mousedown="ctrl.k.playNote(4)" ng-mouseup="ctrl.k.stopNote()">E</li>
+					<li ng-mousedown="ctrl.k.playNote(5)" ng-mouseup="ctrl.k.stopNote()">F</li>
+					<li ng-mousedown="ctrl.k.playNote(6)" ng-mouseup="ctrl.k.stopNote()" class="ebony">F# G♭</li>
+					<li ng-mousedown="ctrl.k.playNote(7)" ng-mouseup="ctrl.k.stopNote()">G</li>
+					<li ng-mousedown="ctrl.k.playNote(8)" ng-mouseup="ctrl.k.stopNote()" class="ebony">G# A♭</li>
+					<li ng-mousedown="ctrl.k.playNote(9)" ng-mouseup="ctrl.k.stopNote()">A</li>
+					<li ng-mousedown="ctrl.k.playNote(10)" ng-mouseup="ctrl.k.stopNote()" class="ebony">A# B♭</li>
+					<li ng-mousedown="ctrl.k.playNote(11)" ng-mouseup="ctrl.k.stopNote()">B</li>
+				</ol>
+				<ol class="scale-2">
+					<li ng-mousedown="ctrl.k.playNote(12)" ng-mouseup="ctrl.k.stopNote()">C</li>
+					<li ng-mousedown="ctrl.k.playNote(13)" ng-mouseup="ctrl.k.stopNote()" class="ebony">C# D♭</li>
+					<li ng-mousedown="ctrl.k.playNote(14)" ng-mouseup="ctrl.k.stopNote()">D</li>
+					<li ng-mousedown="ctrl.k.playNote(15)" ng-mouseup="ctrl.k.stopNote()" class="ebony">D# E♭</li>
+					<li ng-mousedown="ctrl.k.playNote(16)" ng-mouseup="ctrl.k.stopNote()">E</li>
+					<li ng-mousedown="ctrl.k.playNote(17)" ng-mouseup="ctrl.k.stopNote()">F</li>
+					<li ng-mousedown="ctrl.k.playNote(18)" ng-mouseup="ctrl.k.stopNote()" class="ebony">F# G♭</li>
+					<li ng-mousedown="ctrl.k.playNote(19)" ng-mouseup="ctrl.k.stopNote()">G</li>
+					<li ng-mousedown="ctrl.k.playNote(20)" ng-mouseup="ctrl.k.stopNote()" class="ebony">G# A♭</li>
+					<li ng-mousedown="ctrl.k.playNote(21)" ng-mouseup="ctrl.k.stopNote()">A</li>
+					<li ng-mousedown="ctrl.k.playNote(22)" ng-mouseup="ctrl.k.stopNote()" class="ebony">A# B♭</li>
+					<li ng-mousedown="ctrl.k.playNote(23)" ng-mouseup="ctrl.k.stopNote()">B</li>
+					<li ng-mousedown="ctrl.k.playNote(24)" ng-mouseup="ctrl.k.stopNote()">C</li> 
+				</ol> 
+			</div>
+			<volumecontrol></volumecontrol>
+		</div>
+		<div class="form-group wave">
+			<div class="col-lg-2 col-md-2">
+			    <h3>Wave</h3>
+				<label class="control control--radio">Triangle
+			    	<input type="radio" name="radio" ng-model="ctrl.k.type" ng-value="'triangle'">
+			     	<div class="control__indicator"></div>
+			    </label>
+			    <label class="control control--radio">Sine
+			    	<input type="radio" name="radio" ng-model="ctrl.k.type" ng-value="'sine'">
+			     	<div class="control__indicator"></div>
+			    </label>
+			    <label class="control control--radio">Square
+			    	<input type="radio" name="radio" ng-model="ctrl.k.type" ng-value="'square'">
+			     	<div class="control__indicator"></div>
+			    </label>
+			    <label class="control control--radio">Sawtooth
+			    	<input type="radio" name="radio" ng-model="ctrl.k.type" ng-value="'sawtooth'">
+			     	<div class="control__indicator"></div>
+			    </label>
+			    <br />
+			    <div>
+			    	<button class="btn btn-tommy" ng-click="ctrl.playBeat()"><span ng-bind="ctrl.buttonText"></span> Beat</button>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br />
