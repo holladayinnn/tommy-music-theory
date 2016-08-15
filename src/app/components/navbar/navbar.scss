@@ -1,5 +1,75 @@
+$turquoise: #0bb;
+
+acme-navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
 .acme-navbar-text{
   color: white;
+}
+
+.navbar-inverse {
+    // background-color: #056;
+    background-color: #078;
+    // border-color: #045;
+    //border-color: #056;
+    border: none !important;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #dff;
+}
+
+.nav-center {  
+  text-align: center;
+  ul.nav {
+    display: inline-block;
+    li {
+      display: inline
+      a {
+        float: left
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  color: #bff !important;
+  font-family: raleway !important;
+}
+
+.navbar-brand span {
+  padding-right: 4px;
+  color: #d94a42;
+}
+
+.navbar-nav > .active > a {
+    background-color: #056 !important;
+
+}
+
+.nav-center {
+  margin-left: -15px !important;
+  margin-right:-15px !important;
+}
+
+.nav-pills {
+  margin-bottom:-6px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  //background-color: $turquoise;
+  background-color: #eeeeee;
+  color: #5C6B7E;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    // background-color: $turquoise;
+    background-color: #cecece;
+    color: white;
 }
 
 a {
@@ -12,6 +82,48 @@ h1 {
   line-height: 1.25em;
 }
 
-// a:hover, a:focus {
-//   color: greenyellow;
-// }
+.navbar-nav {
+	float:none;
+}
+
+.login span {
+	margin-right: 5px;
+}
+
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a.menu:hover, .dropdown:hover .dropbtn {
+    background-color: $turquoise !important;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    a {
+        color: black;
+        padding: 12px 16px;
+        background-color: #f9f9f9;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1 !important}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

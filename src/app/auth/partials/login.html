@@ -1,19 +1,19 @@
 <div class="row">
-  <div class="col-md-6">
-    <h3 class="form-signin-heading">Sign in</h3>
-    <p>Not a member? Please <a ui-sref="{{ctrl.navStates.kRegisterState}}">register</a> instead.</p>
+  <div class="col-md-10 col-md-offset-1 tommy-container">
+    <h4 class="auth-header">Sign in</h4>
   
     <form ng-submit="ctrl.onSubmit('login')">
-      <div class="form-group">
+      <div class="form-group underline">
         <label for="email">Email address</label>
         <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="ctrl.loginCredentials.email">
       </div>
-      <div class="form-group">
+      <div class="form-group underline">
         <label for="password">Password</label>
         <input type="password" class="form-control" id="password" placeholder="Password" ng-model="ctrl.loginCredentials.password">
       </div>
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button type="submit" class='btn btn-tommy'>Sign in</button>
     </form>
-
+    <br />
   </div>
 </div>
+<br />

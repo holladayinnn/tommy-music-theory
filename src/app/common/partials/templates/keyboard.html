@@ -1,29 +1,28 @@
-<div class="piano" ng-if="kCtrl.length != 1.5">
-	<ol class="scale-1" ng-if="kCtrl.length == 2">
-		<li ng-repeat="key in kCtrl.pianoKeys|limitTo: 12" ng-mousedown="Kctrl.k.playNote($index)" ng-mouseup="kCtrl.k.stopNote()" ng-class="key.class">
-			<span ng-bind="key.note"></span>
-		</li>
-	</ol>
-	<ol class="">
+<div class="piano-background">
+	<div class="piano" id="basic-piano">
 		<ol class="scale-1">
-		<li ng-repeat="key in kCtrl.pianoKeys|limitTo: 12" ng-mousedown="kCtrl.k.playNote($index+12)" ng-mouseup="kCtrl.k.stopNote()" ng-class="key.class">
-			<span ng-bind="key.note"></span>
-		</li>
-		<li ng-if="kCtrl.length>=1" ng-mousedown="kCtrl.k.playNote(24)" ng-mouseup="kCtrl.k.stopNote()" ng-class="ivory">
-			C
-		</li> 
-	</ol> 
+			<li ng-repeat="key in kCtrl.pianoKeys | limitTo: kCtrl.limit(0) | startFrom: kCtrl.low" 
+				ng-bind="key.note" 
+				ng-class="key.class" 
+				ng-mousedown="kCtrl.k.playNote(kCtrl.note($index))" 
+				ng-mouseup="kCtrl.k.stopNote()">
+			</li>
+		</ol> 
+		<ol class="scale-1 move-left" ng-if="kCtrl.difference-12 > 0">
+			<li ng-repeat="key in kCtrl.pianoKeys | limitTo: kCtrl.limit(12) | startFrom: kCtrl.low" 
+				ng-bind="key.note" 
+				ng-class="key.class" 
+				ng-mousedown="kCtrl.k.playNote(kCtrl.note($index+12)) " 
+				ng-mouseup="kCtrl.k.stopNote()">
+			</li>
+		</ol>
+		<ol class="scale-1 move-left" ng-if="kCtrl.difference-24 > 0">
+			<li ng-repeat="key in kCtrl.pianoKeys | limitTo: kCtrl.limit(24) | startFrom: kCtrl.low" 
+				ng-bind="key.note" 
+				ng-class="key.class" 
+				ng-mousedown="kCtrl.k.playNote(kCtrl.note($index+24)) " 
+				ng-mouseup="kCtrl.k.stopNote()">
+			</li>
+		</ol>
+	</div>
 </div>
-
-<div ng-if="kCtrl.length == 1.5" class="piano">
-	<ol class="scale-1">
-		<li ng-repeat="key in kCtrl.pianoKeys|limitTo: 12" ng-mousedown="Kctrl.k.playNote($index)" ng-mouseup="kCtrl.k.stopNote()" ng-class="key.class">
-			<span ng-bind="key.note"></span>
-		</li>
-	<ol class="scale-2">
-		<li ng-repeat="key in kCtrl.pianoKeys|limitTo: 5" ng-mousedown="Kctrl.k.playNote($index+12)" ng-mouseup="kCtrl.k.stopNote()" ng-class="key.class">
-			<span ng-bind="key.note"></span>
-		</li>
-	</ol> 
-</div>
-

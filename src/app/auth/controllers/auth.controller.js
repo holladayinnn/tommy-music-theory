@@ -1,6 +1,6 @@
 angular.module('MyApp.Auth')
 
-.controller('AuthController', function(STATES, Login, Register) {
+.controller('AuthController', function(STATES) {
 	var vm = this;
 	vm.navStates = STATES;
 

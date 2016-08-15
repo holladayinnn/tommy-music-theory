@@ -76,7 +76,7 @@
 				<br />
 				<div class="piano" id="interval-trainer-piano">
 					<ol class="scale-1">
-						<li ng-repeat="key in itCtrl.pianoKeys" ng-bind="key.interval" ng-class="key.class" 
+						<li ng-repeat="key in itCtrl.pianoKeys | limitTo: 17" ng-bind="key.interval" ng-class="key.class" 
 							ng-mousedown="itCtrl.k.playNote(itCtrl.it.frq1 + $index)" ng-mouseup="itCtrl.k.stopNote()" ng-click="itCtrl.checkAnswer($index, itCtrl.it); ctrl.update_user(itCtrl.sk.score)"></li>
 					</ol> 
 				</div>

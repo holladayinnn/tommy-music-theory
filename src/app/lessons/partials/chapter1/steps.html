@@ -20,28 +20,12 @@
 			<strong>Whole steps and half steps are the basic building blocks of scales, intervals, melodies, and chords.</strong>
 		</p>
 		<p>
-			<strong>Note: </strong> I added one extra key to the piano this time (an extra C on top).  Notice that there are no sharps and flats (or black notes) between B and C and between E and F.  This means, a half step up from E is F. F is actually synonymous with E#, and E is synonymous with Fb.  Similarly, a half step up from B is C.  Therefore, C is synonymous with B#, and B is synonymous with Cb.
+			<strong>Note: </strong> Notice that there are no sharps and flats (or black notes) between B and C and between E and F.  This means, a half step up from E is F. F is actually synonymous with E#, and E is synonymous with Fb.  Similarly, a half step up from B is C.  Therefore, C is synonymous with B#, and B is synonymous with Cb.
 		</p>
 		<p>
-			<strong>Also Note: </strong> Notes with the same name can actually have different frequencies.  The two C's on the piano below are both called C, but one sounds higher than the other.  The C that is higher is actually exactly double the frequency of the C that is lower.  The relationship between these two C's is called an <strong>octave</strong>.
+			<strong>Also Note: </strong> I know it is confusing, but since it is common practice to think of the piano centered around 'middle C', I made the piano in this example's lowest note C.  All of the following lessons will have the piano starting from C.  
 		</p>
-		<div class="piano">
-			<ol class="scale-1">
-				<li ng-mousedown="ctrl.k.playNote(12)" ng-mouseup="ctrl.k.stopNote()">C</li>
-				<li ng-mousedown="ctrl.k.playNote(13)" ng-mouseup="ctrl.k.stopNote()" class="ebony">C# D♭</li>
-				<li ng-mousedown="ctrl.k.playNote(14)" ng-mouseup="ctrl.k.stopNote()">D</li>
-				<li ng-mousedown="ctrl.k.playNote(15)" ng-mouseup="ctrl.k.stopNote()" class="ebony">D# E♭</li>
-				<li ng-mousedown="ctrl.k.playNote(16)" ng-mouseup="ctrl.k.stopNote()">E</li>
-				<li ng-mousedown="ctrl.k.playNote(17)" ng-mouseup="ctrl.k.stopNote()">F</li>
-				<li ng-mousedown="ctrl.k.playNote(18)" ng-mouseup="ctrl.k.stopNote()" class="ebony">F# G♭</li>
-				<li ng-mousedown="ctrl.k.playNote(19)" ng-mouseup="ctrl.k.stopNote()">G</li>
-				<li ng-mousedown="ctrl.k.playNote(20)" ng-mouseup="ctrl.k.stopNote()" class="ebony">G# A♭</li>
-				<li ng-mousedown="ctrl.k.playNote(21)" ng-mouseup="ctrl.k.stopNote()">A</li>
-				<li ng-mousedown="ctrl.k.playNote(22)" ng-mouseup="ctrl.k.stopNote()" class="ebony">A# B♭</li>
-				<li ng-mousedown="ctrl.k.playNote(23)" ng-mouseup="ctrl.k.stopNote()">B</li>
-				<li ng-mousedown="ctrl.k.playNote(24)" ng-mouseup="ctrl.k.stopNote()">C</li> 
-			</ol> 
-		</div>
+		<keyboard low=0 high=12></keyboard>
 		<volumecontrol></volumecontrol>
 		<quiz questions="stepsCtrl.questions" link="ctrl.navStates.kIntervalState"></quiz>
 	</div>

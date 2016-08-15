@@ -1,0 +1,111 @@
+$turquoise: #0bb;
+
+/*buttons*/
+
+.btn-secondary {
+    color: #373a3c;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-secondary:hover {
+    color: #373a3c;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+
+.btn-tommy {
+    // background: #2b90d9;
+    background: $turquoise;
+    cursor: pointer;
+    -webkit-user-select: none;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: capitalize;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    -webkit-appearance: none;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    text-decoration: none;
+    overflow: hidden;
+    padding: 10px 10px 12px;
+    transition: all 60ms ease-in-out;
+    border-width: 0px;
+    border-style: none;
+    border-color: initial;
+    border-radius: 0px;
+    flex: 0 0 160px;
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-width: 160px;
+}
+
+.btn-tommy:disabled {
+  color: white;
+  opacity: 0.65;
+}
+
+.btn-tommy:hover, .btn-tommy:active, .btn-tommy:focus {
+  color: white;
+  opacity: 0.85;
+  transition: all 60ms ease;
+}
+
+.btn-tommy:disabled {
+  color: white;
+  opacity: 0.65;
+}
+
+.btn-tommy-white {
+    // color: #2b90d9;
+    color: $turquoise;
+    // border: 2px solid #2b90d9;
+    border: 2px solid $turquoise;
+    background: transparent;
+    background: white;
+    cursor: pointer;
+    -webkit-user-select: none;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    -webkit-appearance: none;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    text-decoration: none;
+    overflow: hidden;
+    padding: 10px 10px 12px;
+    transition: all 60ms ease-in-out;
+    border-radius: 0px;
+    flex: 0 0 160px;
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-width: 160px;
+}
+
+.btn-tommy-white:hover, .btn-tommy-white.-active, .btn-tommy-white:focus, .btn-tommy-white:active {
+    color: white;
+    // border-color: #2b90d9;
+    // background: #2b90d9;
+    border-color: $turquoise;
+    background: $turquoise;
+  }
+
+.btn-tommy-white:disabled {
+  // color: #2b90d9;
+  color: $turquoise;
+  opacity: 0.65;
+  background:transparent;
+}

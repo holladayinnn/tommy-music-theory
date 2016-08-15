@@ -1,0 +1,67 @@
+/*input text*/
+
+input[type="text"],input[type="email"] {
+  font-family: sans-serif;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+input[type="text"]:focus, input[type="email"]:focus {
+  outline: none;
+}
+
+ .glow input[type="text"] {
+  width: 25%;
+  padding: 10px;
+  font-size: 14px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+.glow input[type="text"]:focus,
+.glow input[type="text"].focus {
+  border: solid 1px #707070;
+  //box-shadow: 0 0 5px 1px #969696;
+}
+
+.glow button {
+  height: 41px;
+  margin-left: -4px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.thick-border input[type="text"] {
+  padding: 10px;
+  border: solid 5px #c9c9c9;
+  transition: border 0.3s;
+}
+.thick-border input[type="text"]:focus,
+.thick-border input[type="text"].focus {
+  border: solid 5px #969696;
+}
+
+.underline input[type="text"], .underline input[type="email"], input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+.underline input[type="text"]:focus,
+.underline input[type="text"].focus,
+.underline input[type="email"]:focus,
+.underline input[type="email"].focus,
+.underline input[type="password"]:focus, 
+.underline input[type="password"].focus{
+  border-bottom: solid 2px #969696;
+}
+
+.inset input[type="text"] {
+  padding: 10px;
+  border: solid 1px #fff;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.3s;
+}
+.inset input[type="text"]:focus,
+.inset input[type="text"].focus {
+  box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}

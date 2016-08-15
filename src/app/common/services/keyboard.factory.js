@@ -1,13 +1,14 @@
 (function(){
 	angular.module('MyApp.Common')
 
-	.factory("Keyboard", function(frequencyList, AudioContext, Volume) {
+	.factory("Keyboard", function(frequencyList, AudioContext, Volume, ngAudio) {
 		function Keyboard() {
 			this.myAudioContext  = AudioContext.get();
 	  		this.frequency = 440;
-	  		this.type = 'triangle';
+	  		this.type = 'piano';
 	  		this.oscillator = null;
 	  		this.gainNode = null;
+	  		this.file = null;
 		}
 
 		Keyboard.prototype.setWaveType = function(wave) {
@@ -23,24 +24,44 @@
 		}
 
 		Keyboard.prototype.stopNote = function() {
-			this.oscillator.stop();
+			if(this.type == 'piano') {
+				this.stopPianoNote();
+			}
+			else {
+				this.oscillator.stop();
+			}
 		}
 
 		Keyboard.prototype.playNote = function(note) {
-			this.oscillator = this.myAudioContext.createOscillator();
-			this.gainNode = this.myAudioContext.createGain();
+			if(this.type == 'piano') {
+				this.playPianoNote(note);
+			}
+			else {
+				this.oscillator = this.myAudioContext.createOscillator();
+				this.gainNode = this.myAudioContext.createGain();
 
-			this.updateFrequency(note);
+				this.updateFrequency(note);
 
-			this.oscillator.type = this.type;
-			this.oscillator.frequency.value = this.frequency;
-			this.gainNode.gain.value = Volume.get();
+				this.oscillator.type = this.type;
+				this.oscillator.frequency.value = this.frequency;
+				this.gainNode.gain.value = Volume.get();
 
-			this.gainNode.connect(this.myAudioContext.destination);
-			this.oscillator.connect(this.gainNode);	
+				this.gainNode.connect(this.myAudioContext.destination);
+				this.oscillator.connect(this.gainNode);	
 
-			this.oscillator.start(this.myAudioContext.currentTime);
-			// this.oscillator.stop(this.myAudioContext.currentTime + .3);
+				this.oscillator.start(this.myAudioContext.currentTime);
+				// this.oscillator.stop(this.myAudioContext.currentTime + .3);
+			}
+		}
+
+		Keyboard.prototype.stopPianoNote = function() {
+			this.file.stop();
+		}
+
+		Keyboard.prototype.playPianoNote = function(note) {
+			note = parseInt(note) + 28;
+			this.file = ngAudio.load("app/common/sounds/piano/" + note + ".ogg");
+			this.file.play();
 		}
 
 		return Keyboard;
