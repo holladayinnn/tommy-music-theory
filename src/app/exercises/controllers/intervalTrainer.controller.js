@@ -13,30 +13,33 @@
             vm.itlevels = itlevelDescription;
             vm.level = vm.sk.level;
             vm.startGame = true;
+            vm.startKeepingScore = false;
             vm.levelUp = false;
             vm.startOver = false;
             vm.beatGame = false;
-            // Volume.set(.2);     
+            vm.disableButton = false;     
 
             vm.checkAnswer = function(answer) {
-                vm.levelUp = false;
-                vm.startOver = false;
-                vm.beatGame = false;
-                vm.numAnswered+=1;
+                if(vm.startKeepingScore) {
+                    vm.levelUp = false;
+                    vm.startOver = false;
+                    vm.beatGame = false;
+                    vm.numAnswered+=1;
 
-                vm.sk.checkAnswer(answer, vm.it);
+                    vm.sk.checkAnswer(answer, vm.it);
 
-                if (vm.level != vm.sk.level) {
-                    vm.level = vm.sk.level;
-                    vm.levelUp = true;
-                }
-                if (vm.sk.numAttempted == 0) {
-                    vm.startOver = true;
-                }
-                //rewrite below:
-                if (vm.level == vm.it.levels && vm.sk.numAttempted != 0 && vm.sk.numAttempted % vm.sk.numToPass == 0 
-                        && vm.sk.numCorrect > vm.sk.numAttempted-vm.sk.numToFail) {
-                    vm.beatGame = true;
+                    if (vm.level != vm.sk.level) {
+                        vm.level = vm.sk.level;
+                        vm.levelUp = true;
+                    }
+                    if (vm.sk.numAttempted == 0) {
+                        vm.startOver = true;
+                    }
+                    //rewrite below:
+                    if (vm.level == vm.it.levels && vm.sk.numAttempted != 0 && vm.sk.numAttempted % vm.sk.numToPass == 0 
+                            && vm.sk.numCorrect > vm.sk.numAttempted-vm.sk.numToFail) {
+                        vm.beatGame = true;
+                    }
                 }
             };
 
@@ -47,9 +50,6 @@
                 vm.sk.resetLevel(level, vm.it);
                 vm.level = vm.sk.level;
                 vm.it.createNew(vm.sk.level);
-                // $timeout(function(){
-                //     self.it.play()
-                // }, 1000);
             }
 
             vm.isActive = function(index) {
