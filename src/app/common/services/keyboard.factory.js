@@ -9,6 +9,7 @@
 	  		this.oscillator = null;
 	  		this.gainNode = null;
 	  		this.file = null;
+	  		this.isPlaying = false;
 		}
 
 		Keyboard.prototype.setWaveType = function(wave) {
@@ -56,12 +57,20 @@
 
 		Keyboard.prototype.stopPianoNote = function() {
 			this.file.stop();
+			this.isPlaying= false;
 		}
 
 		Keyboard.prototype.playPianoNote = function(note) {
-			note = parseInt(note) + 28;
-			this.file = ngAudio.load("app/common/sounds/piano/" + note + ".ogg");
-			this.file.play();
+			if(!this.isPlaying) {
+				note = parseInt(note) + 28;
+				this.file = ngAudio.load("app/common/sounds/piano/" + note + ".ogg");
+				this.file.volume = Volume.get();
+				this.file.play();
+				this.isPlaying = true;
+			}
+			else {
+				this.stopPianoNote();
+			}
 		}
 
 		return Keyboard;

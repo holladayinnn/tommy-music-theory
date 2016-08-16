@@ -99,3 +99,18 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
     background: #ccc;
 }
+
+.vertical>row.volume {
+    
+}
+
+.vertical>.volume>input[type=range]
+{
+    -webkit-appearance: slider-vertical;
+    width: 20px;
+    height: 100px;
+}
+
+.vertical>.volume>i {
+
+}
