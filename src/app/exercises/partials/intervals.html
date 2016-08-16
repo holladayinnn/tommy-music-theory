@@ -59,7 +59,7 @@
 						<h3>Level <span ng-bind="itCtrl.level"></span>: <span ng-bind="itCtrl.itlevels[itCtrl.level].description"></span></h3>
 					</div> -->
 					<div ng-click="itCtrl.startKeepingScore = true" class="intervaltrainer-button">
-						<button ng-click="itCtrl.it.play(itCtrl.sk.level)" type="button" class="btn btn-sm btn-tommy btn-block">Play Interval</button>
+						<button ng-disabled="itCtrl.disableButton" ng-click="itCtrl.play()" type="button" class="btn btn-sm btn-tommy btn-block">Play Interval</button>
 					</div>
 					<br>
 					<div class="intervaltrainer-header">

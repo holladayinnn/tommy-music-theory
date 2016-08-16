@@ -16,6 +16,7 @@
 	  		this.gainNode2 = null;
 	  		this.direction = directions[0];
 	  		this.levels = itlevelDescription.length;
+	  		this.intervalTime = 0;
 	  		this.file1 = null;
 	  		this.file2 = null;
 		}
@@ -61,6 +62,13 @@
 		}
 
 		IntervalTrainer.prototype.play = function() {
+			if(this.direction == 'together') {
+				this.intervalTime = 1;
+			}
+			else {
+				this.intervalTime = 2;
+			}
+
 			if (this.type == 'piano') {
 				this.playPiano()
 			}

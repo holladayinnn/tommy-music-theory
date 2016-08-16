@@ -17,7 +17,15 @@
             vm.levelUp = false;
             vm.startOver = false;
             vm.beatGame = false;
-            vm.disableButton = false;     
+            vm.disableButton = false;
+
+            vm.play = function() {
+                vm.it.play(vm.sk.level);
+                vm.disableButton = true;
+                $timeout(function() {
+                    vm.disableButton = false;
+                }, vm.it.intervalTime * 1000);
+            }     
 
             vm.checkAnswer = function(answer) {
                 if(vm.startKeepingScore) {
