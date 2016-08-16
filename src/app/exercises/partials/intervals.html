@@ -34,7 +34,7 @@
 			<div class="levels col-md-4">
 			<button class="btn btn-tommy btn-block instructions-button" type="button" ng-click="itCtrl.startGame = false"><i class="fa fa-info-circle" aria-hidden="true"></i> Instructions</button>
 				<ul class="list-group">
-					<button class="list-group-item" type="button" ng-repeat="level in itCtrl.itlevels" ng-click="itCtrl.resetLevel(level.num)">Level <span ng-bind="level.num"></span></button>
+					<button class="list-group-item" type="button" ng-repeat="level in itCtrl.itlevels" ng-click="itCtrl.resetLevel(level.num)" ng-class="itCtrl.isActive($index)">Level <span ng-bind="level.num"></span></button>
 				</ul>
 			</div>
 
@@ -61,6 +61,13 @@
 					<div class="intervaltrainer-button">
 						<button ng-click="itCtrl.it.play(itCtrl.sk.level)" type="button" class="btn btn-sm btn-tommy btn-block">Play Interval</button>
 					</div>
+					<br>
+					<div class="intervaltrainer-header">
+						<h3>Level 
+							<span ng-bind="itCtrl.level"></span>: 
+							<span ng-bind="itCtrl.itlevels[itCtrl.level].description"></span>
+						</h3>
+					</div>
 
 					<div class="intervaltrainer-top">
 						<div class="intervaltrainer-score">
@@ -80,9 +87,6 @@
 							ng-mousedown="itCtrl.k.playNote(itCtrl.it.frq1 + $index)" ng-mouseup="itCtrl.k.stopNote()" ng-click="itCtrl.checkAnswer($index, itCtrl.it); ctrl.update_user(itCtrl.sk.score)"></li>
 					</ol> 
 				</div>
-				<div class="intervaltrainer-header">
-						<h3>Level <span ng-bind="itCtrl.level"></span>: <span ng-bind="itCtrl.itlevels[itCtrl.level].description"></span></h3>
-					</div>
 				<div class="intervaltrainer-questions">
 					<h4>
 						Level up in: <strong><span ng-bind="itCtrl.sk.numToPass -(itCtrl.sk.numAttempted%itCtrl.sk.numToPass)"></span></strong>

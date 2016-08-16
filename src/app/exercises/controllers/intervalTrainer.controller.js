@@ -51,5 +51,14 @@
                 //     self.it.play()
                 // }, 1000);
             }
+
+            vm.isActive = function(index) {
+                if(index == vm.level ) {
+                    return "current";
+                }
+                else {
+                    return "not-current";
+                }
+            }
     });
 })();

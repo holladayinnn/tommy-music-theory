@@ -1,4 +1,5 @@
 $turquoise: #0bb;
+$ebony : #171C1A;
 
 #interval-trainer-piano > ol > li {
   font-size: 0.8rem;
@@ -57,6 +58,7 @@ $turquoise: #0bb;
 	display:inline-block;
 	margin-top: 0px;
 	font-size: 16px;
+	font-weight:bold;
 }
 
 .intervaltrainer-details {
@@ -114,4 +116,11 @@ $turquoise: #0bb;
   line-height: 0;
   opacity: 0;
   padding: 0 10px;
+}
+
+.current, .current:hover {
+	font-weight: bold;
+	//color: #d94a42 !important;
+	//background-color: $turquoise !important;
+	color: $ebony !important;
 }

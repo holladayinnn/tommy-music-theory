@@ -45,11 +45,6 @@ acme-navbar {
   color: #d94a42;
 }
 
-.navbar-nav > .active > a {
-    background-color: #056 !important;
-
-}
-
 .nav-center {
   margin-left: -15px !important;
   margin-right:-15px !important;
@@ -104,6 +99,16 @@ li a.menu:hover, .dropdown:hover .dropbtn {
 
 li.dropdown {
     display: inline-block;
+}
+
+li.active > a.menu, .active:hover .dropbtn {
+    background-color: #056 !important;
+
+}
+
+li.active > a.menu:hover {
+    background-color: #056 !important;
+
 }
 
 .dropdown-content {
