@@ -42,6 +42,23 @@
     })
 
     //Lessons child-states
+    .state(STATES.kCh1State, {
+      url:'/chapter1',
+      templateUrl: 'app/lessons/partials/chapter1/ch1.main.html',
+      controller: 'Ch1Controller as ch1ctrl'
+    })
+    .state(STATES.kCh2State, {
+      url:'/chapter2',
+      templateUrl: 'app/lessons/partials/chapter2/ch2.main.html',
+      controller:  'Ch2Controller as ch2ctrl'
+    })
+    .state(STATES.kCh3State, {
+      url:'/chapter3',
+      templateUrl: 'app/lessons/partials/chapter1/notes.html',
+      controller: 'Ch3Controller as ch3ctrl'
+    })
+
+    //Chapter 1 child-states
     .state(STATES.kNoteState, {
       url:'/notes',
       templateUrl: 'app/lessons/partials/chapter1/notes.html',
@@ -72,9 +89,11 @@
       templateUrl: 'app/lessons/partials/chapter1/diatonicintervals.html',
       controller: 'DiatonicIntervalsController as diatonicCtrl'
     })
+
+    //Chapter 2 child states
     .state(STATES.kChromaticIntervalState, {
       url:'/chromatic-intervals',
-      templateUrl: 'app/lessons/partials/chromaticintervals.html',
+      templateUrl: 'app/lessons/partials/chapter2/chromaticintervals.html',
       controller: 'ChromaticIntervalsController as chromaticCtrl'
     })
 

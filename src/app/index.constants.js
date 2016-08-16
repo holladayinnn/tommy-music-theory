@@ -13,13 +13,20 @@
         kAuthState:'auth',
 
     	//Lesson child states
-    	kNoteState:'lessons.note',
-        kStepState:'lessons.step',
-        kIntervalState:'lessons.interval',
-        kScaleState:'lessons.scale',
-        kMajorScaleState:'lessons.majorScale',
-    	kDiatonicIntervalState:'lessons.diatonicInterval',
-        kChromaticIntervalState:'lessons.chromaticInterval',
+        kCh1State:'lessons.ch1',
+        kCh2State:'lessons.ch2',
+        kCh3State:'lessons.ch3',
+
+        //Chapter 1 Child states
+    	kNoteState:'lessons.ch1.note',
+        kStepState:'lessons.ch1.step',
+        kIntervalState:'lessons.ch1.interval',
+        kScaleState:'lessons.ch1.scale',
+        kMajorScaleState:'lessons.ch1.majorScale',
+    	kDiatonicIntervalState:'lessons.ch1.diatonicInterval',
+
+        //Chapter 2 Child states
+        kChromaticIntervalState:'lessons.ch2.chromaticInterval',
 
         //Exercise Child States
         kETIntervalState:'exercises.interval',

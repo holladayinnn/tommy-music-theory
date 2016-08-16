@@ -10,9 +10,13 @@
   	$rootScope.$on('$stateChangeStart',
 	function(event, toState, toParams, fromState, fromParams, options){
 		// console.log(toState);
-		if(toState.name == 'lessons') {
-			event.preventDefault()
+		if(toState.name == 'lessons.ch1') {
+			event.preventDefault();
 			$state.go(STATES.kNoteState);
+		}
+		else if(toState.name == 'lessons.ch2') {
+				event.preventDefault();
+				$state.go(STATES.kChromaticIntervalState);
 		}
 		else if(toState.name == 'exercises') {
 			event.preventDefault();
