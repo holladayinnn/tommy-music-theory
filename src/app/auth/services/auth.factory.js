@@ -68,18 +68,6 @@
              },
              function(response){
                 isAuthenticated = false;
-              
-                // var message = '\
-                //   <div class="ngdialog-message">\
-                //   <div><h3>Login Unsuccessful</h3></div>' +
-                //     '<div><p>' +  response.data.err.message + '</p><p>' +
-                //       response.data.err.name + '</p></div>' +
-                //   '<div class="ngdialog-buttons">\
-                //       <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click=confirm("OK")>OK</button>\
-                //   </div>'
-                  
-                //   console.log(response.data.err.message, response.data.err.name);
-                  //ngDialog.openConfirm({ template: message, plain: 'true'});
              }
           
           );
@@ -107,15 +95,6 @@
                 $rootScope.$broadcast('registration:Successful');
              },
              function(response){
-              
-                // var message = '\
-                //   <div class="ngdialog-message">\
-                //   <div><h3>Registration Unsuccessful</h3></div>' +
-                //     '<div><p>' +  response.data.err.message + 
-                //     '</p><p>' + response.data.err.name + '</p></div>';
-
-                    //console.log(response.data.err.message, response.data.err.name);
-                  //ngDialog.openConfirm({ template: message, plain: 'true'});
 
              }
           
