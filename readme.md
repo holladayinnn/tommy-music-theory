@@ -12,7 +12,7 @@ To start the node rest api:
 
 Open up a new terminal window and start mongo
 
-Open up another terminal window and run:
+Open up another terminal window, navigate to the directory, and run:
 
 $ npm start
 
