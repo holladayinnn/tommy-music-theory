@@ -21,11 +21,21 @@
             </li>
             <li ui-sref-active="active"><a ui-sref="{{ctrl.navStates.kExerciseState}}" class="menu">Exercises</a></li>
             <li ui-sref-active="active"><a ui-sref="{{ctrl.navStates.kContactState}}" class="menu">Contact</a></li>
-            <li ui-sref-active="active"><a ui-sref="{{ctrl.navStates.kFreeplayState}}" class="menu">Free Play</a></li>
-            <li ui-sref-active="active" class="login pull-right">
+            <li ui-sref-active="active"><a ui-sref="{{ctrl.navStates.kFreeplayState}}" class="menu">Play</a></li>
+            <li ng-if="ctrl.loggedIn == false" ui-sref-active="active" class="login pull-right">
               <a ui-sref="{{ctrl.navStates.kLoginState}}" class="menu">
                 <span class="glyphicon glyphicon-log-in"></span>Log In
               </a>
+            </li>
+            <li ng-if="ctrl.loggedIn == true" ui-sref-active="active" class="dropdown pull-right">
+              <a href="#" class="dropbtn menu">
+                <strong><span ng-bind="ctrl.username"></span></strong>
+              </a>
+              <div class="dropdown-content">
+                  <a href="#">Profile</a>
+                  <a href="#" ng-click="ctrl.logOut()">Log Out</a>
+                  <!-- <a ui-sref="{{ctrl.navStates.kCh3State}}">Chapter 3</a> -->
+                </div>
             </li>
           </ul>
         </div>

@@ -10,7 +10,11 @@
   	$rootScope.$on('$stateChangeStart',
 	function(event, toState, toParams, fromState, fromParams, options){
 		// console.log(toState);
-		if(toState.name == 'lessons.ch1') {
+		if(toState.name == 'lessons') {
+			event.preventDefault();
+			$state.go('.child.grandchild');
+		}
+		else if(toState.name == 'lessons.ch1') {
 			event.preventDefault();
 			$state.go(STATES.kNoteState);
 		}

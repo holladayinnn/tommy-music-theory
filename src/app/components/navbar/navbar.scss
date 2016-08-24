@@ -50,23 +50,6 @@ acme-navbar {
   margin-right:-15px !important;
 }
 
-.nav-pills {
-  margin-bottom:-6px;
-}
-
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-  //background-color: $turquoise;
-  background-color: #eeeeee;
-  color: #5C6B7E;
-}
-
-.nav > li > a:hover, .nav > li > a:focus {
-    text-decoration: none;
-    // background-color: $turquoise;
-    background-color: #cecece;
-    color: white;
-}
-
 a {
   color: black;
 }
@@ -102,13 +85,13 @@ li.dropdown {
 }
 
 li.active > a.menu, .active:hover .dropbtn {
-    background-color: #056 !important;
-
+    //background-color: #056 !important;
+    background-color: #078 !important;
 }
 
-li.active > a.menu:hover {
-    background-color: #056 !important;
-
+li.active > a.menu:hover, .dropdown:hover .dropbtn {
+    //background-color: #056 !important;
+    background-color: $turquoise !important;
 }
 
 .dropdown-content {

@@ -6,6 +6,7 @@
 var mongoose = require('mongoose');
 var passport = require('passport');
 var User = mongoose.model('User');
+var verify = require('../routes/verify');
 
 exports.getUsers = function(req, res) {
     User.find({}, function(err, users) {
@@ -14,7 +15,7 @@ exports.getUsers = function(req, res) {
           message: err
         });
       } else {
-        res.json(_users);
+        res.json(users);
       }
     });
 };
@@ -51,12 +52,13 @@ exports.loginUser = function(req, res, next) {
     }
     req.logIn(user, function(err) {
       if (err) {
+        console.log(err);
         return res.status(500).json({
           err: 'Could not log in user'
         });
       }
         
-      var token = Verify.getToken({"username":user.username, "_id":user._id, "admin":user.admin});
+      var token = verify.getToken({"username":user.username, "_id":user._id, "admin":user.admin});
               res.status(200).json({
         status: 'Login successful!',
         success: true,
@@ -67,6 +69,9 @@ exports.loginUser = function(req, res, next) {
 };
 
 exports.logoutUser = function(req, res) {
+  //console.log("logging out");
+  //req.session.destroy();
+  //console.log(req.session);
   req.logout();
   res.status(200).json({
     status: 'Bye!'

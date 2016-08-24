@@ -1,26 +1,31 @@
 <div class="row">
   <div class="col-md-8 col-md-offset-2 tommy-container">
     <h4 class="auth-header">Register</h4>
-    <form ng-submit="ctrl.onSubmit('register')">
+    <form ng-submit="registerCtrl.doRegister()">
       <div class="form-group underline">
         <label for="name">First name</label>
-        <input type="text" class="form-control" id="fistName" placeholder="Enter your first name">
+        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" ng-model="registerCtrl.registration.firstname">
       </div>
       <div class="form-group underline">
         <label for="name">Last name</label>
-        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" ng-model="registerCtrl.registration.lastname">
       </div>
-      <div class="form-group underline">
+      <!-- <div class="form-group underline">
         <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="ctrl.registerCredentials.email">
-      </div>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="registerCtrl.registration.email">
+      </div> -->
       <div class="form-group underline">
         <label for="username">Username</label>
-        <input type="text" class="form-control" id="uesrname" placeholder="Enter username">
+        <input type="text" class="form-control" id="uesrname" placeholder="Enter username" ng-model="registerCtrl.registration.username">
       </div>
       <div class="form-group underline">
         <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="ctrl.registerCredentials.password">
+        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="registerCtrl.registration.password">
+      </div>
+      <div class="checkbox">
+          <label>
+              <input type="checkbox" ng-model="registerCtrl.registration.rememberMe"> Remember me
+          </label>
       </div>
       <button type="submit" class='btn btn-tommy'>Register</button>
     </form>

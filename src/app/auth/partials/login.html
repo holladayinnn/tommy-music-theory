@@ -2,14 +2,19 @@
   <div class="col-md-8 col-md-offset-2 tommy-container">
     <h4 class="auth-header">Sign in</h4>
   
-    <form ng-submit="ctrl.onSubmit('login')">
+    <form ng-submit="loginCtrl.doLogin()">
       <div class="form-group underline">
         <label for="Username">Username</label>
-        <input type="text" class="form-control" id="username" placeholder="Enter username or email">
+        <input type="text" class="form-control" id="username" placeholder="Enter username" ng-model="loginCtrl.loginData.username">
       </div>
       <div class="form-group underline">
         <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="ctrl.loginCredentials.password">
+        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="loginCtrl.loginData.password">
+        <div class="checkbox">
+          <label>
+              <input type="checkbox" ng-model="loginCtrl.rememberMe"> Remember me
+          </label>
+         </div>
       </div>
       <button type="submit" class='btn btn-tommy'>Sign in</button>
     </form>

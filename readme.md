@@ -8,4 +8,12 @@ $ bower install
 
 $ gulp serve
 
+To start the node rest api:
+
+Open up a new terminal window and start mongo
+
+Open up another terminal window and run:
+
+$ npm start
+
 It is still a work in progress.  I hope you enjoy!

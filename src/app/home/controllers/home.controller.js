@@ -11,7 +11,8 @@
 	        	$location.hash(anchorName);
 	    	}
 	    	else {
-	    		$anchorScroll().yOffset = 50;
+	    		// $anchorScroll().yOffset = 50;
+	    		$anchorScroll();
 	    	}
 		}
 	});

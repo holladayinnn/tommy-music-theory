@@ -132,11 +132,13 @@
     //Auth child-states
     .state(STATES.kLoginState, {
       url: '/login',
-      templateUrl: 'app/auth/partials/login.html'
+      templateUrl: 'app/auth/partials/login.html',
+      controller: 'LoginController as loginCtrl'
     })
     .state(STATES.kRegisterState, {
       url: '/register',
-      templateUrl: 'app/auth/partials/register.html'
+      templateUrl: 'app/auth/partials/register.html',
+      controller: 'RegisterController as registerCtrl'
     });
 
     $urlRouterProvider.otherwise('/');

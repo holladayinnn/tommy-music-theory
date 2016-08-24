@@ -4,9 +4,11 @@ var express = require('express');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var authenticate = require('../authenticate/authenticate');
 
 function initializeModels() {
-	require('../models/_user.model');
+	//require('../models/_user.model');
 	require('../models/user');
 }
 
@@ -17,7 +19,7 @@ function initializeStaticallyServedDirectories(app) {
 
 function initailizeRoutes(app) {
 	// Load in Route handlers
-	require('../routes/_user.routes')(app);
+	//require('../routes/_user.routes')(app);
 	require('../routes/users')(app);
 }
 

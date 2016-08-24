@@ -18,5 +18,5 @@ mongoose.connection.on('error', function(err) {
 
 var app = require('./server/init/express')(db);
 var server = app.listen(8080, function () {
-console.log('Server Listening at http://localhost:%s', server.address().port);
+	 console.log('Server Listening at http://localhost:%s', server.address().port);
 });

@@ -34,6 +34,27 @@ p {
   font-size: 40px;
 }
 
+.nav-pills {
+  margin-bottom:-6px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  //background-color: $turquoise;
+  //background-color: #eeeeee;
+  background-color: $turquoise;
+  //color: #5C6B7E;
+  color: white;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    // background-color: $turquoise;
+    //background-color: #cecece;
+    background-color: #eeeeee;
+    color:navy;
+    //color: white;
+}
+
 a.page-link {
   color: #5C6B7E;
   font-size: 1em;
