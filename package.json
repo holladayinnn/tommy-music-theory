@@ -20,7 +20,7 @@
     "serve-favicon": "~2.2.0"
   },
   "scripts": {
-    "postinstall": "gulp default",
+    "start": "gulp build",
     "test": "gulp test"
   },
   "devDependencies": {
