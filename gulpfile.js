@@ -35,3 +35,10 @@ gulp.task('heroku', ['clean'], function () {
 gulp.task('heroku:production', ['clean'], function(){
   console.log('herokuduction');
 });
+
+gulp.task('serveprod', function() {
+  connect.server({
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  });
+});
