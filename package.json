@@ -21,6 +21,7 @@
     "serve-favicon": "~2.2.0"
   },
   "scripts": {
+    "start": "gulp default",
     "postinstall": "./node_modules/bower/bin/bower install",
     "test": "gulp test"
   },
