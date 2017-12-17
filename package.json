@@ -21,7 +21,7 @@
     "serve-favicon": "~2.2.0"
   },
   "scripts": {
-    "start": "bower install",
+    "start": "npm start",
     "postinstall": "gulp default",
     "test": "gulp test"
   },
