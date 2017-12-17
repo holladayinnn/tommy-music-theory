@@ -21,7 +21,6 @@
     "serve-favicon": "~2.2.0"
   },
   "scripts": {
-    "start": "gulp heroku",
     "preinstall": "./node_modules/bower/bin/bower install",
     "test": "gulp test"
   },
