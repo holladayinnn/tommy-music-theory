@@ -22,7 +22,6 @@
   },
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
-    "postinstall": "gulp default",
     "test": "gulp test"
   },
   "devDependencies": {
