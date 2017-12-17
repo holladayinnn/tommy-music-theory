@@ -21,8 +21,7 @@
     "serve-favicon": "~2.2.0"
   },
   "scripts": {
-    // "preinstall": "./node_modules/bower/bin/bower install",
-    "test": "gulp test"
+      "test": "gulp test"
   },
   "devDependencies": {
     "estraverse": "~4.1.0",
