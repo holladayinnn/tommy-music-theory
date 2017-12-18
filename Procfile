@@ -1,1 +1,1 @@
-web: node node_modules/gulp/bin/gulp heroku:production
+web: node node_modules/gulp/bin/gulp serve
