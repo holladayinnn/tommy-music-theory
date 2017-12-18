@@ -1,1 +1,1 @@
-web: node node_modules/gulp/bin/gulp publish
+web: node heroku-web.js
