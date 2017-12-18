@@ -65,7 +65,7 @@
     "wrench": "~1.5.8"
   },
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install",
+    "postinstall": "./node_modules/bower/bin/bower install && gulp build",
     "test": "gulp test"
   },
   "devDependencies": {},
