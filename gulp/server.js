@@ -62,3 +62,19 @@ gulp.task('serve:e2e', ['inject'], function () {
 gulp.task('serve:e2e-dist', ['build'], function () {
   browserSyncInit(conf.paths.dist, []);
 });
+
+gulp.task('browsersync:production', ['build'], function() {
+  var productionConfig = {
+    server: {
+      baseDir: [conf.paths.dist, conf.paths.src],
+      routes: {
+        '/bower_components': 'bower_components'
+      }
+    },
+    port: 80
+  };
+
+  browserSync(productionConfig);
+});
+
+gulp.task('publish', ['browsersync:production']);
