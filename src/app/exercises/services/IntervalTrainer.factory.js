@@ -2,7 +2,7 @@
 
 	angular.module('MyApp.Exercise')
 
-	.factory('IntervalTrainer', function(AudioContext, frequencyList, directions, intervalDistances, 
+	.factory('IntervalTrainer', function(AudioContext, frequencyList, directions, intervalDistances,
 							itlevelDescription, Volume, ngAudio, BufferLoader) {
 		function IntervalTrainer() {
 			this.myAudioContext  = AudioContext.get();
@@ -121,13 +121,13 @@
 			var note2 = parseInt(this.frq2) + 28;
 
 			var bufferLoader = new BufferLoader(
-				this.myAudioContext, 
-			    ["app/common/sounds/piano/" + note1 + ".ogg", "app/common/sounds/piano/" + note2 + ".ogg"],
+				this.myAudioContext,
+			    ["/app/common/sounds/piano/" + note1 + ".ogg", "/app/common/sounds/piano/" + note2 + ".ogg"],
 			    finishedLoading,
 			    this.direction
 		    );
 
-		  	bufferLoader.load(); 
+		  	bufferLoader.load();
 
 		  	//callback function that plays the files from bufferloader
 		  	function finishedLoading(bufferList) {
@@ -138,7 +138,7 @@
 				source2.buffer = bufferList[1];
 				var gainNode1 = this.context.createGain();
 				var gainNode2 = this.context.createGain();
-				
+
 				gainNode1.gain.value = Volume.get();
 				gainNode2.gain.value = Volume.get();
 

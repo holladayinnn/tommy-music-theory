@@ -48,7 +48,7 @@
 				this.gainNode.gain.value = Volume.get();
 
 				this.gainNode.connect(this.myAudioContext.destination);
-				this.oscillator.connect(this.gainNode);	
+				this.oscillator.connect(this.gainNode);
 
 				this.oscillator.start(this.myAudioContext.currentTime);
 				// this.oscillator.stop(this.myAudioContext.currentTime + .3);
@@ -63,7 +63,7 @@
 		Keyboard.prototype.playPianoNote = function(note) {
 			if(!this.isPlaying) {
 				note = parseInt(note) + 28;
-				this.file = ngAudio.load("app/common/sounds/piano/" + note + ".ogg");
+				this.file = ngAudio.load("/app/common/sounds/piano/" + note + ".ogg");
 				this.file.volume = Volume.get();
 				this.file.play();
 				this.isPlaying = true;

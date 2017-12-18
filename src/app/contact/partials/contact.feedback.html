@@ -24,7 +24,7 @@
 					<span ng-click="fbCtrl.setRating(3)" class="three">☆</span>
 					<span ng-click="fbCtrl.setRating(2)" class="two">☆</span>
 					<span ng-click="fbCtrl.setRating(1)" class="one">☆</span>
-			
+
 				</div>
 			</div>
 			<br />
@@ -37,14 +37,14 @@
 				<textarea class="form-control" rows="5" ng-model="fbCtrl.improvementFeedback" ng-required="fbCtrl.feedbackRequired" ng-change="fbCtrl.setFeedbackRequired()" placeholder="What could be better?"></textarea>
 			</div>
 			<div>
-				<button type="submit" class="btn btn-tommy" ng-disabled="fbCtrl.feedbackForm.$invalid" ng-model="fbCtrl.improvementFeedback" ng-audio="app/common/sounds/submitForm.mp3" volume="0.2">Submit</button>
+				<button type="submit" class="btn btn-tommy" ng-disabled="fbCtrl.feedbackForm.$invalid" ng-model="fbCtrl.improvementFeedback" ng-audio="/app/common/sounds/submitForm.mp3" volume="0.2">Submit</button>
 			</div>
 		</form>
 		<br />
 	</div>
 </div>
 <div ng-show="fbCtrl.formSubmitted">
-	<h3>I appreciate your feedback, <span ng-bind="fbCtrl.name"></span>!</h3>  
+	<h3>I appreciate your feedback, <span ng-bind="fbCtrl.name"></span>!</h3>
 	<h3>Thanks for taking the time to fill in this form!</h3>
 </div>
 <br />
