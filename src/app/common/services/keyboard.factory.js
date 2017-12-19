@@ -63,7 +63,7 @@
 		Keyboard.prototype.playPianoNote = function(note) {
 			if(!this.isPlaying) {
 				note = parseInt(note) + 28;
-				this.file = ngAudio.load("/app/common/sounds/Piano/" + note + ".ogg");
+				this.file = ngAudio.load("/app/common/sounds/piano/" + note + ".ogg");
 				this.file.volume = Volume.get();
 				this.file.play();
 				this.isPlaying = true;
