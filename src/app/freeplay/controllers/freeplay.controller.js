@@ -15,7 +15,7 @@
 				vm.buttonText = "Play"
 			}
 			else {
-				vm.beat = ngAudio.load("/app/common/sounds/jdilla.mp3");
+				vm.beat = ngAudio.load("app/common/sounds/jdilla.mp3");
 				vm.playing = true;
 				vm.beat.play();
 				vm.buttonText = "Stop"
