@@ -122,7 +122,7 @@
 
 			var bufferLoader = new BufferLoader(
 				this.myAudioContext,
-			    ["app/common/sounds/Piano/" + note1 + ".mp3", "app/common/sounds/Piano/" + note2 + ".mp3"],
+			    ["app/common/sounds/piano/" + note1 + ".ogg", "app/common/sounds/" + note2 + ".ogg"],
 			    finishedLoading,
 			    this.direction
 		    );
