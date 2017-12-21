@@ -71,11 +71,12 @@
 		}
 
 		Keyboard.prototype.playPianoNote = function(note) {
-      	var isPlaying = this.file && this.file.currentTime > 0 && !this.file.paused && !this.file.ended && this.file.readyState > 2;
+      		var isPlaying = this.file && this.file.currentTime > 0 && !this.file.paused && !this.file.ended && this.file.readyState > 2;
 			if(!isPlaying) {
 				// note = parseInt(note) + 28;
 				//this.file = ngAudio.load("app/common/sounds/Piano/" + note + ".mp3");
-				this.file = this.pianoNotes[parseInt(note)]
+				note = parseInt(note);
+				this.file = this.pianoNotes[note];
 				this.file.volume = Volume.get();
 				this.file.play();
 				this.isPlaying = true;
