@@ -75,8 +75,7 @@
 			if(!isPlaying) {
 				// note = parseInt(note) + 28;
 				//this.file = ngAudio.load("app/common/sounds/Piano/" + note + ".mp3");
-				console.log(parseInt(note))
-				this.file = this.pianoNotes[note]
+				this.file = this.pianoNotes[parseInt(note)]
 				this.file.volume = Volume.get();
 				this.file.play();
 				this.isPlaying = true;
