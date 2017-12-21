@@ -12,7 +12,7 @@
 	  		this.isPlaying = false;
 	  		this.pianoNotes = new Array(25);
 	  		for(var i = 0; i < 25; i++){
-	  			this.pianoNotes[i] = ngAudio.load("app/common/sounds/Piano/" + parseInt(i + 28) + ".mp3");
+	  			this.pianoNotes[i] = ngAudio.load("app/common/sounds/Piano/" + (i + 28) + ".mp3");
 	  		}
 		}
 
@@ -75,6 +75,7 @@
 			if(!isPlaying) {
 				// note = parseInt(note) + 28;
 				//this.file = ngAudio.load("app/common/sounds/Piano/" + note + ".mp3");
+				console.log(parseInt(note))
 				this.file = this.pianoNotes[note]
 				this.file.volume = Volume.get();
 				this.file.play();
