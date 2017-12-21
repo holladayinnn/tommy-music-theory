@@ -56,16 +56,20 @@
 		}
 
 		Keyboard.prototype.stopPianoNote = function() {
-			var isPlaying = this.file && this.file.currentTime > 0 && !this.file.paused && !this.file.ended && this.file.readyState > 2;
-			if (isPlaying) {
+			// var isPlaying = this.file && this.file.currentTime > 0 && !this.file.paused && !this.file.ended && this.file.readyState > 2;
+			// if (isPlaying) {
+			// 	this.file.stop();
+			// }
+			if(this.isPlaying = true) {
 				this.file.stop();
+				this.isPlaying= false;
 			}
-			// this.isPlaying= false;
 		}
 
 		Keyboard.prototype.playPianoNote = function(note) {
-      var isPlaying = this.file && this.file.currentTime > 0 && !this.file.paused && !this.file.ended && this.file.readyState > 2;
-			if(!isPlaying) {
+   //    var isPlaying = this.file && this.file.currentTime > 0 && !this.file.paused && !this.file.ended && this.file.readyState > 2;
+			// if(!isPlaying) {
+			if(!this.isPlaying)
 				note = parseInt(note) + 28;
 				this.file = ngAudio.load("app/common/sounds/Piano/" + note + ".mp3");
 				this.file.volume = Volume.get();
