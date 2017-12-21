@@ -10,6 +10,10 @@
 	  		this.gainNode = null;
 	  		this.file = null;
 	  		this.isPlaying = false;
+	  		this.pianoNotes = new Array(25);
+	  		for(int i = 0; i < 25; i++){
+	  			this.pianoNotes[i] = ngAudio.load("app/common/sounds/Piano/" + parseInt(note + 28) + ".mp3");
+	  		}
 		}
 
 		Keyboard.prototype.setWaveType = function(wave) {
@@ -69,8 +73,9 @@
 		Keyboard.prototype.playPianoNote = function(note) {
       	var isPlaying = this.file && this.file.currentTime > 0 && !this.file.paused && !this.file.ended && this.file.readyState > 2;
 			if(!isPlaying) {
-				note = parseInt(note) + 28;
-				this.file = ngAudio.load("app/common/sounds/Piano/" + note + ".mp3");
+				// note = parseInt(note) + 28;
+				//this.file = ngAudio.load("app/common/sounds/Piano/" + note + ".mp3");
+				this.file = this.pianoNotes[note]
 				this.file.volume = Volume.get();
 				this.file.play();
 				this.isPlaying = true;
