@@ -11,7 +11,7 @@
 	  		this.file = null;
 	  		this.isPlaying = false;
 	  		this.pianoNotes = new Array(25);
-	  		for(int i = 0; i < 25; i++){
+	  		for(var i = 0; i < 25; i++){
 	  			this.pianoNotes[i] = ngAudio.load("app/common/sounds/Piano/" + parseInt(note + 28) + ".mp3");
 	  		}
 		}
