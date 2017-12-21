@@ -67,6 +67,7 @@
 			if(this.isPlaying = true) {
 				this.file.stop();
 				this.isPlaying= false;
+				this.file.currentTime = 0
 			}
 		}
 
