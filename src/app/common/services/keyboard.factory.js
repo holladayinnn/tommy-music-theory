@@ -12,7 +12,7 @@
 	  		this.isPlaying = false;
 	  		this.pianoNotes = new Array(25);
 	  		for(var i = 0; i < 25; i++){
-	  			this.pianoNotes[i] = ngAudio.load("app/common/sounds/Piano/" + parseInt(note + 28) + ".mp3");
+	  			this.pianoNotes[i] = ngAudio.load("app/common/sounds/Piano/" + parseInt(i + 28) + ".mp3");
 	  		}
 		}
 
