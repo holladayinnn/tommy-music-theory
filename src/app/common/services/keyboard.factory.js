@@ -89,31 +89,41 @@
 		}
 
 		Keyboard.prototype.playPianoNote = function(note) {
-			var note = parseInt(note ) + 28;
+			id = '#piano'+(note);
+			var pianoNote = document.querySelector(id);
+			// console.log(pianoNote);
+			pianoNote.load();
+			pianoNote.volume = Volume.get();
+			pianoNote.play();
+			setTimeout(function(){
+    			pianoNote.pause();
+			}, 500);
+			
+			// note = parseInt(note) + 28;
 
-			var bufferLoader = new BufferLoader(
-				this.myAudioContext,
-			    ["app/common/sounds/Piano/" + note + ".mp3"],
-			    finishedLoading
-		    );
+			// var bufferLoader = new BufferLoader(
+			// 	this.myAudioContext,
+			//     ["app/common/sounds/Piano/" + note + ".mp3"],
+			//     finishedLoading
+		 //    );
 
-		  	bufferLoader.load();
+		 //  	bufferLoader.load();
 
-		  	function finishedLoading(bufferList) {
-				// Create two sources and play them both together.
-				source = this.context.createBufferSource();
-				source.buffer = bufferList[0];
-				var gainNode = this.context.createGain();
+		 //  	function finishedLoading(bufferList) {
+			// 	// Create two sources and play them both together.
+			// 	source = this.context.createBufferSource();
+			// 	source.buffer = bufferList[0];
+			// 	var gainNode = this.context.createGain();
 
-				gainNode.gain.value = Volume.get();
+			// 	gainNode.gain.value = Volume.get();
 
-				source.connect(gainNode);
+			// 	source.connect(gainNode);
 
-				gainNode.connect(this.context.destination);
+			// 	gainNode.connect(this.context.destination);
 
-				source.start(this.context.currentTime);
-				source.stop(this.context.currentTime+.5);
-			}
+			// 	source.start(this.context.currentTime);
+			// 	source.stop(this.context.currentTime+.5);
+			// }
 		}
 
 		// Keyboard.prototype.playPianoNote = function(note) {
