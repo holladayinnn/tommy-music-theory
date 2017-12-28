@@ -16,30 +16,20 @@
 	  		// 	this.pianoNotes[i] = ngAudio.load("app/common/sounds/Piano/" + (i + 28) + ".mp3");
 	  		// }
 
-	  		for(var i = 0; i < 25; i++) {
-	  			var bufferLoader = new BufferLoader(
-				this.myAudioContext,
-			    ["app/common/sounds/Piano/" + (i + 28) + ".mp3"],
-			    finishedLoading);
-			    bufferLoader.load();
-		    }
+	  	// 	for(var i = 0; i < 25; i++) {
+	  	// 		var bufferLoader = new BufferLoader(
+				// this.myAudioContext,
+			 //    ["app/common/sounds/Piano/" + (i + 28) + ".mp3"],
+			 //    finishedLoading);
+			 //    bufferLoader.load();
+		  //   }
 
 
-		    function finishedLoading(bufferList) {
-		    	console.log("here");
-	  			source = this.context.createBufferSource();
-				source.buffer = bufferList[0];
-				var gainNode = this.context.createGain();
-
-				gainNode.gain.value = 0;
-
-				source.connect(gainNode);
-
-				gainNode.connect(this.context.destination);
-
-				source.start(this.context.currentTime);
-				source.stop(this.context.currentTime+.001);
-	  		}
+		  //   function finishedLoading(bufferList) {
+		  //   	console.log("here");
+	  	// 		source = this.context.createBufferSource();
+				// source.buffer = bufferList[0];
+	  	// 	}
 		}
 
 		Keyboard.prototype.setWaveType = function(wave) {
