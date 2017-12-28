@@ -26,6 +26,16 @@
 		    function finishedLoading(bufferList) {
 	  			source = this.context.createBufferSource();
 				source.buffer = bufferList[0];
+				var gainNode = this.context.createGain();
+
+				gainNode.gain.value = Volume.get();
+
+				source.connect(gainNode);
+
+				gainNode.connect(this.context.destination);
+
+				source.start(this.context.currentTime);
+				source.stop(this.context.currentTime);
 	  		}
 		}
 
