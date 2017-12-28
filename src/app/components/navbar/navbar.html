@@ -18,16 +18,16 @@
           <ul class="nav navbar-nav">
             <!-- <li ui-sref-active="active"><a ui-sref="{{ctrl.navStates.kHomeState}}">Home</a></li> -->
             <li ui-sref-active="active" class="dropdown" uib-dropdown on-toggle="toggled(open)">
-              <a ui-sref="{{ctrl.navStates.kCh1State}}" class="dropbtn menu" uib-dropdown-toggle>  Lessons </a>
+              <a ng-click="isNavCollapsed = false" ui-sref="{{ctrl.navStates.kCh1State}}" class="dropbtn menu" uib-dropdown-toggle>  Lessons </a>
               <div class="dropdown-content" uib-dropdown-menu>
-                  <a ui-sref="{{ctrl.navStates.kCh1State}}">1: Basics</a>
-                  <a ui-sref="{{ctrl.navStates.kCh2State}}">2: Notation</a>
+                  <a ng-click="isNavCollapsed = false" ui-sref="{{ctrl.navStates.kCh1State}}">1: Basics</a>
+                  <a ng-click="isNavCollapsed = false" ui-sref="{{ctrl.navStates.kCh2State}}">2: Notation</a>
                   <!-- <a ui-sref="{{ctrl.navStates.kCh3State}}">Chapter 3</a> -->
                 </div>
             </li>
-            <li ui-sref-active="active"><a ui-sref="{{ctrl.navStates.kExerciseState}}" class="menu">Exercises</a></li>
-            <li ui-sref-active="active"><a ui-sref="{{ctrl.navStates.kContactState}}" class="menu">Contact</a></li>
-            <li ui-sref-active="active"><a ui-sref="{{ctrl.navStates.kFreeplayState}}" class="menu">Play</a></li>
+            <li ui-sref-active="active"><a ng-click="isNavCollapsed = false" ui-sref="{{ctrl.navStates.kExerciseState}}" class="menu">Exercises</a></li>
+            <li ui-sref-active="active"><a ng-click="isNavCollapsed = false" ui-sref="{{ctrl.navStates.kContactState}}" class="menu">Contact</a></li>
+            <li ui-sref-active="active"><a ng-click="isNavCollapsed = false" ui-sref="{{ctrl.navStates.kFreeplayState}}" class="menu">Play</a></li>
             <!-- <li ng-if="ctrl.loggedIn == false" ui-sref-active="active" class="login pull-right">
               <a ui-sref="{{ctrl.navStates.kLoginState}}" class="menu">
                 <span class="glyphicon glyphicon-log-in"></span>Log In

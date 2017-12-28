@@ -4,6 +4,8 @@
 	.controller('Ch1Controller', function() {
 		var vm = this;
 
+		vm.isCollapsed = false;
+
 		
 	});
 })();
