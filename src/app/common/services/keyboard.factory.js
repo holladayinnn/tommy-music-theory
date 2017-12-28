@@ -35,7 +35,7 @@
 				gainNode.connect(this.context.destination);
 
 				source.start(this.context.currentTime);
-				source.stop(this.context.currentTime+.001);
+				source.stop(this.context.currentTime+.01);
 	  		}
 		}
 
