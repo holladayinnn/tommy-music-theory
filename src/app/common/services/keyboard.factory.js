@@ -15,6 +15,18 @@
 	  		// for(var i = 0; i < 25; i++){
 	  		// 	this.pianoNotes[i] = ngAudio.load("app/common/sounds/Piano/" + (i + 28) + ".mp3");
 	  		// }
+
+	  		for(var i = 0; i < 25; i++) {
+	  			var bufferLoader = new BufferLoader(
+				this.myAudioContext,
+			    ["app/common/sounds/Piano/" + (i + 28) + ".mp3"],
+			    finishedLoading);
+		    }
+
+		    function finishedLoading(bufferList) {
+	  			source = this.context.createBufferSource();
+				source.buffer = bufferList[0];
+	  		}
 		}
 
 		Keyboard.prototype.setWaveType = function(wave) {
