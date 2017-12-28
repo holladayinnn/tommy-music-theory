@@ -25,6 +25,8 @@
       var self = this;
       self.navStates = STATES;
 
+      self.isNavCollapsed = false;
+
       self.loggedIn = false;
       self.username = "";
 
