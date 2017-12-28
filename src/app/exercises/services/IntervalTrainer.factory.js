@@ -120,6 +120,9 @@
 			var note1 = parseInt(this.frq1) + 28;
 			var note2 = parseInt(this.frq2) + 28;
 
+			console.log(note1);
+			console.log(note2);
+
 			var bufferLoader = new BufferLoader(
 				this.myAudioContext,
 			    ["app/common/sounds/Piano/" + note1 + ".mp3", "app/common/sounds/Piano/" + note2 + ".mp3"],
